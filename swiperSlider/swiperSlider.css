@@ -1,0 +1,32 @@
+.swiper {
+  max-width: 335px;
+  height: 290px;
+}
+
+.slider-wrapper-mobile {
+  display: none;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.card .swiper-pagination-bullet_def {
+  opacity: 1;
+  width: 13px;
+  height: 13px;
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+.card .swiper-pagination-bullet_act {
+  opacity: 1;
+  width: 13px;
+  height: 13px;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 7px !important;
+}

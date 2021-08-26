@@ -84,10 +84,10 @@ usageBtn.addEventListener('click', (e) => {
   console.log(e.target);
   if (e.target.textContent == "читать все") {
     e.target.textContent = "свернуть";
-    usageMobile.style.display = "block";    
+    usageMobile.classList.toggle("usage__mobile_show");    
   } else {
     e.target.textContent = "читать все";
-    usageMobile.style.display = "none";
+    usageMobile.classList.toggle("usage__mobile_show");
   }
 })
 

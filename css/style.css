@@ -365,6 +365,7 @@ header {
   /* identical to box height */
 
   color: #a6a8b5;
+  transition: all 1s;
 }
 
 .card__about {
@@ -383,7 +384,7 @@ header {
 /* buttons for modal ---------------------- */
 
 .main-buttons {
-  margin-top: 10px;
+  margin-top: 19px;
   /* height: 48px; */
   max-width: 514px;
   display: flex;
@@ -649,6 +650,7 @@ footer {
 
   /* card */
   .main-buttons {
+    margin-top: 10px;
     flex-wrap: wrap;
   }
 
@@ -792,7 +794,14 @@ footer {
   }
 
   .usage__mobile {
-    display: none;
+    display: block;
+    max-height: 0;
+    transition: 2s;
+    overflow: hidden;
+  }
+
+  .usage__mobile_show {
+    max-height: 850px;
   }
 
   .usage__btn {

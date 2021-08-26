@@ -383,7 +383,7 @@ header {
 /* buttons for modal ---------------------- */
 
 .main-buttons {
-  margin-top: 20px;
+  margin-top: 10px;
   /* height: 48px; */
   max-width: 514px;
   display: flex;
@@ -718,6 +718,9 @@ footer {
   .footer-top-col-1 {
     flex-grow: 0;
   }
+  .main-buttons button {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -982,6 +985,12 @@ footer {
   .footer-mobile__dev {
     text-align: center;
     margin-top: 42px;
+  }
+
+  /* MODAL-MOBILE ------------------------------------------------------------------------------------------------------ MODAL-MOBILE */
+  .modal {
+    max-width: 335px;
+    padding: 61px 51px 55px 51px;
   }
 }
 

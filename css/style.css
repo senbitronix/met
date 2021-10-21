@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -75,10 +80,9 @@ ul {
 
 .modal {
   width: 450px;
-  padding: 56px 90px 55px 90px;
+  padding: 56px 50px 55px 50px;
   background: #ffffff;
   border-radius: 20px;
-  border: 1px solid black;
 
   position: absolute;
   top: 50%;
@@ -86,7 +90,7 @@ ul {
   transform: translate(-50%, -50%);
 }
 
-.modal input {
+.modal__input {
   display: block;
   width: 100%;
   height: 53px;
@@ -144,7 +148,7 @@ header {
 }
 
 .header__container {
-  max-width: 1263px;
+  max-width: 1240px;
   padding-left: 20px;
   padding-right: 20px;
 
@@ -155,10 +159,6 @@ header {
 
 .header__left {
   display: flex;
-  max-width: 646px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-grow: 1;
 }
 
 .header__right {
@@ -178,6 +178,7 @@ header {
 .logo {
   width: 200px;
   height: 27px;
+  margin-right: 30px;
 }
 
 .logo__img {
@@ -281,15 +282,17 @@ header {
 
 .card-content__col1 {
   min-width: 350px;
-  max-width: 550px;
+  /* max-width: 550px; */
+  max-width: 50%;
+
+  padding-right: 40px;
 }
 
 .card-content__col2 {
-  max-width: 514px;
+  /* max-width: 514px; */
+  max-width: 50%;
   margin-right: 26px;
-
-  padding-left: 20px;
-  box-sizing: content-box;
+  /* box-sizing: content-box; */
 }
 
 /* card slider start -----------------------------------*/
@@ -340,7 +343,7 @@ header {
 
 .usage__description {
   margin-top: 18px;
-  margin-right: -18px;
+  margin-right: -5px;
   font-family: Roboto;
   font-size: 14px;
   line-height: 24px;
@@ -388,8 +391,6 @@ header {
   margin-top: 19px;
   /* height: 48px; */
   max-width: 514px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .main-buttons__price-btn {
@@ -408,10 +409,12 @@ header {
 }
 
 .main-buttons__question-btn {
+  margin-top: 10px;
   border: 2px solid #2a54a2;
   box-sizing: border-box;
   border-radius: 10px;
   padding: 11px 18.5px;
+  background-color: #fff;
 
   font-family: Montserrat;
   font-style: normal;
@@ -460,8 +463,6 @@ header {
 .documents__wrapper {
   margin-top: 26px;
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
 }
 
 .documents__item {
@@ -469,12 +470,15 @@ header {
 }
 
 .documents__item_left {
-  max-width: 248.42px;
+  min-width: 256px;
+  display: flex;
+  align-items: center;
 }
 
 .documents__item_right {
-  margin-left: 44px;
-  max-width: 239.25px;
+  display: flex;
+  align-items: center;
+  min-width: 256px;
 }
 
 .documents__item:hover * {
@@ -496,16 +500,8 @@ header {
   font-size: 12px;
   line-height: 15px;
   color: #333333;
-  display: inline-block;
+  display: block;
   vertical-align: middle;
-}
-
-.documents__item_left > span {
-  max-width: 180.47px;
-}
-
-.documents__item_right > span {
-  max-width: 166px;
 }
 
 /* FOOTER ----------------------------------------------------------------------------------------------------------------- FOOTER */
@@ -639,14 +635,23 @@ footer {
 
 /* MEDIA ------------------------------------------------------------------------------------------------------ MEDIA */
 
+@media (max-width: 1024px) {
+  .documents__wrapper {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 1200px) {
   /* header 129 */
   .header__container {
     flex-direction: column;
+    align-content: center;
   }
 
   .header__right {
-    margin-top: 15px;
+    margin-top: 0px;
+    margin-right: 0;
+    justify-content: center;
   }
 
   /* card */
@@ -668,6 +673,19 @@ footer {
 }
 
 @media (max-width: 900px) {
+  /* .header__container {
+    align-content: normal;
+  } */
+
+  /* .header__right {
+    justify-content: left;
+  } */
+
+  .card-content__col1,
+  .card-content__col2 {
+    max-width: 550px;
+  }
+
   .footer {
     padding-top: 24px;
   }
@@ -692,11 +710,16 @@ footer {
   .header {
     padding-top: 15px;
   }
-  .header__left {
+  /* .header__left {
     flex-direction: column;
-  }
-  .header__nav {
+  } */
+  /* .header__nav {
     margin-top: 10px;
+  } */
+
+  .card-content__col1,
+  .card-content__col2 {
+    max-width: 700px;
   }
 
   .nav__item:first-child {
@@ -714,6 +737,17 @@ footer {
   }
 }
 
+@media (max-width: 650px) {
+  .header__left {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav__items {
+    line-height: 50px;
+  }
+}
+
 @media (max-width: 620px) {
   .footer-top {
     justify-content: space-between;
@@ -723,6 +757,10 @@ footer {
   }
   .main-buttons button {
     margin-top: 10px;
+  }
+  .modal {
+    max-width: 285px;
+    padding: 61px 31px 55px 31px;
   }
 }
 
@@ -737,10 +775,17 @@ footer {
     top: 28px;
     right: 20px;
   }
+
+  .header__container,
+  .header__left {
+    align-content: flex-start;
+  }
+
   .header__logo {
     width: 176px;
     height: 24px;
   }
+
   .header__logo img {
     width: 100%;
   }
@@ -752,6 +797,11 @@ footer {
     line-height: 24px;
     color: #12173a;
   }
+
+  .card-content__col1 {
+    padding: 0;
+  }
+
   .card__headline-caption {
     margin-top: 11px;
     font-family: Montserrat;
@@ -816,9 +866,9 @@ footer {
   .menu__btn {
     display: block;
   }
-  .card {
+  /* .card {
     padding-bottom: 111px;
-  }
+  } */
   .card .slider-wrapper-mobile {
     display: block;
   }
@@ -829,11 +879,11 @@ footer {
     margin-right: 0;
     margin-left: 0;
   }
-  .card-content__col2 {
+  /* .card-content__col2 {
     padding-left: 0;
     padding-right: 10px;
     padding-left: 13px;
-  }
+  } */
   .card-content__title {
     margin-top: 57px;
     font-family: Montserrat;
@@ -898,10 +948,11 @@ footer {
 
   .documents__item {
     max-width: none;
+    /* width: 70%; */
   }
 
   .documents__item_right {
-    margin-top: 19px;
+    /* max-height: 51px; */
   }
   .documents__item_right span {
     max-width: 250px;
@@ -915,7 +966,7 @@ footer {
 
   .footer {
     padding-top: 24px;
-    padding-bottom: 89px;
+    /* padding-bottom: 89px; */
     padding-right: 0;
   }
 
@@ -998,10 +1049,6 @@ footer {
   }
 
   /* MODAL-MOBILE ------------------------------------------------------------------------------------------------------ MODAL-MOBILE */
-  .modal {
-    max-width: 335px;
-    padding: 61px 51px 55px 51px;
-  }
 }
 
 @media (max-width: 369px) {

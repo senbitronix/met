@@ -1,14 +1,19 @@
 .swiper {
   max-width: 335px;
-  height: 290px;
+  max-height: 290px;
 }
 
 .slider-wrapper-mobile {
   display: none;
 }
 
+.swiper-slide {
+  height: auto;
+}
+
 .swiper-slide img {
   width: 100%;
+  display: block;
 }
 
 .card .swiper-pagination-bullet_def {

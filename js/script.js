@@ -57,7 +57,7 @@ document.addEventListener('keydown', (e) => {
 
 /* closeModal(); */
 
-/* slider for PC ----------------------------------------*/
+/* slider for PC --------------------------------------------------------------------------------------------------------*/
 
 let mainPic = document.querySelector('.slider__col2 img');
 let slider = document.querySelector('.slider');

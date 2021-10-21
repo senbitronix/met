@@ -318,12 +318,13 @@ header {
 }
 
 .slider__col2 {
-  /* max-width: 400px; */
+  width: 400px;
   /* height: 400px; */
 }
 
 .slider__item {
   cursor: pointer;
+  max-width: 120px;
 }
 
 .slider__item + .slider__item {
